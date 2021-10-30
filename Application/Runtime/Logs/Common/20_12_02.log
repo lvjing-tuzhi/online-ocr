@@ -1,0 +1,18 @@
+[ 2020-12-02T10:42:50+08:00 ] 127.0.0.1 /Public/img/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+ERR: 无法加载模块:Public
+
+[ 2020-12-02T10:42:51+08:00 ] 127.0.0.1 /Public/img/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+ERR: 无法加载模块:Public
+
+[ 2020-12-02T11:31:16+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+ERR: 无法加载模块:Favicon
+

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit|ie-comp|ie-stand">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="lib/html5shiv.js"></script>
+        <script type="text/javascript" src="lib/respond.min.js"></script>
+        <![endif]-->
+        <link rel="Bookmark" href="../../../../Public/favicon.ico">
+		<link rel="Shortcut Icon" href="../../../../Public/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../../../../Public/static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../../../Public/static/h-ui.admin/css/H-ui.admin.css" />
+		<link rel="stylesheet" type="text/css" href="../../../../Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../../../Public/static/h-ui.admin/skin/default/skin.css" id="skin" />
+		<link rel="stylesheet" type="text/css" href="../../../../Public/static/h-ui.admin/css/style.css" />
+        <title>用户管理</title>
+    </head>
+    <body>
+        <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 用户管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="search.php" title="刷新" ><i class="Hui-iconfont">恢复：&#xe68f;</i></a></nav>
+        <div class="page-container">
+			<div class="text-c">
+			    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a class="btn btn-primary radius" href="/Home/Admin/addUser/type/0"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a> </span> <span class="r"></span> </div>
+			</div>
+            <div class="mt-20">
+                <table class="table table-border table-bordered table-hover table-bg table-sort">
+                    <thead>
+                        <tr class="text-c">
+                            <th width="25"><input type="checkbox" name="check" value="" id="selectAll"></th>
+                            <th width="70">用户名</th>
+                            <th width="">试用剩余次数</th>
+                            <th width="40">是否是VIP</th>
+							<th width="100">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <volist name="list" id="vo">
+							<tr>
+								<th width="25"><input type="checkbox" name="check" value="" id="selectAll"></th>
+								<th width="">{$vo.username}</th>
+								<th width="40">{$vo.test}</th>
+								<if condition="$vo['vip'] == 1">
+									<th class='td-status'><span class='label label-success radius txtShow'>是</span></td>
+									<else />
+									<th class='td-status'><span class='label label-success radius txtShow'>否</span></td>
+								</if>
+								<th width="100">
+									<a style='text-decoration:none' title='设为vip' id="1" class="myshow"><i class='Hui-iconfont'>&#xe6dc</i><input type="hidden" value="{$vo.username}" class="username"/></a>
+									<a style='text-decoration:none'  title='取消vip' id="0" class="myshow"><i class='Hui-iconfont'>&#xe6de</i><input type="hidden" value="{$vo.username}" class="username"/></a>
+									<a title='编辑' href="/Home/Admin/addUser/username/{$vo.username}" class='ml-5' style='text-decoration:none'><i class='Hui-iconfont'>&#xe6df</i></a> 
+									<a title='删除' style='text-decoration:none' class="myDel" id="{$vo.username}"><i class='Hui-iconfont'>&#xe6e2</i></a>
+								</th>
+							</tr>
+						</volist>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--_footer 作为公共模版分离出去-->
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../../../../Public/lib/layer/2.4/layer.js"></script>
+        <script type="text/javascript" src="../../../../Public/static/h-ui/js/H-ui.min.js"></script>
+        <script type="text/javascript" src="../../../../Public/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+        <script type="text/javascript" src="../../../../Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+        
+        <!--请在下方写此页面业务相关的脚本-->
+        <script type="text/javascript" src="../../../../Public/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+        <script type="text/javascript" src="../../../../Public/lib/datatables/1.10.15/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../../../../Public/lib/laypage/1.2/laypage.js"></script>
+		<script>
+			$(".myDel").click(function(){
+				var username = $(this).attr("id");
+				var myDel = $(this);
+				$.ajax({
+					type: "POST",
+					url: "/Home/Admin/pageDel",
+					data: "username="+username,
+					success: function(msg){
+						if(msg == 1){
+							alert("删除成功");
+							myDel.parent().parent().css("display","none");
+						}else{
+							alert("删除失败");
+						}
+				}
+				});
+			});
+			$(".myshow").click(function(){
+				var show = $(this).attr("id");
+				var username = $(this).find(".username").val();
+				var myshow = $(this);
+				var txtshow = "";
+				if(show == "1"){
+					txtshow = "是";
+				}else{
+					txtshow = "否";
+				}
+				$.ajax({
+					type: "POST",
+					url: "/Home/Admin/myShow",
+					data: "show="+show+"&username="+username,
+					success: function(msg){
+						if(msg != 0){
+							alert(txtshow);
+							myshow.parent().parent().find(".td-status").children().text(txtshow);
+						}else{
+							alert(txtshow+"失败");
+						}
+				}
+				});
+			});
+		</script>
+        <script type="text/javascript">
+			$(function () {
+				$('.table-sort').dataTable({
+					"aaSorting": [[1, "asc"]], //默认第几个排序
+					"bStateSave": false, //状态保存
+					"aoColumnDefs": [
+	//                                    {"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+						{"orderable": false, "aTargets": [0, 2, 4]}// 制定列不参与排序
+					]
+				});
+
+			});
+        </script> 
+    </body>
+</html>

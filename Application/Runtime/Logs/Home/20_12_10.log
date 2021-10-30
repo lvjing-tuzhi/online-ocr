@@ -1,0 +1,163 @@
+[ 2020-12-10T13:21:49+08:00 ] 127.0.0.1 /Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.030250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016539s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.025200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.025258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.208492s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.208554s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021884s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.021928s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013711s ]
+
+[ 2020-12-10T13:23:12+08:00 ] 127.0.0.1 /Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034848s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000682s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2020-12-10T13:23:55+08:00 ] 127.0.0.1 /Home/Index/addAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.1110s ]
+SQL: SELECT * FROM `user` WHERE ( username='test' and password='3d9188577cc9bfe9291ac66b5cc872b7' )  [ RunTime:0.0191s ]
+NOTIC: [8] Undefined offset: 0 D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\IndexController.class.php 第 30 行.
+NOTIC: [8] Undefined offset: 0 D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2020-12-10T13:24:01+08:00 ] 127.0.0.1 /Home/Index/addAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `user` WHERE ( username='test1' and password='3d9188577cc9bfe9291ac66b5cc872b7' )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\IndexController.class.php 第 30 行.
+NOTIC: [8] Undefined offset: 0 D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2020-12-10T13:24:06+08:00 ] 127.0.0.1 /Home/Index/addAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0896s ]
+SQL: SELECT * FROM `user` WHERE ( username='1' and password='3d9188577cc9bfe9291ac66b5cc872b7' )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\IndexController.class.php 第 30 行.
+NOTIC: [8] Undefined offset: 0 D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2020-12-10T13:24:18+08:00 ] 127.0.0.1 /Home/Index/addAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `user` WHERE ( username='1' )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\IndexController.class.php 第 22 行.
+SQL: INSERT INTO `user` (`username`,`password`,`test`,`vip`) VALUES ('1','e10adc3949ba59abbe56e057f20f883e','2','0') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2020-12-10T13:24:22+08:00 ] 127.0.0.1 /Home/Index/addAjax
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `user` WHERE ( username='1' and password='e10adc3949ba59abbe56e057f20f883e' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000945s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000992s ]
+
+[ 2020-12-10T13:24:47+08:00 ] 127.0.0.1 /Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002897s ]
+
+[ 2020-12-10T13:25:32+08:00 ] 127.0.0.1 /Home/Ocr/ocrZJ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002379s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `user` WHERE ( username='1' )  [ RunTime:0.0003s ]
+SQL: UPDATE `user` SET `test`='1' WHERE `username` = '1' [ RunTime:0.0198s ]
+NOTIC: [8] Undefined variable: APP_ID D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\OcrController.class.php 第 82 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002166s ]
+
+[ 2020-12-10T13:25:50+08:00 ] 127.0.0.1 /Home/Ocr/ocrWZ
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001585s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0197s ]
+SQL: SELECT * FROM `user` WHERE ( username='1' )  [ RunTime:0.0007s ]
+SQL: UPDATE `user` SET `test`='0' WHERE `username` = '1' [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: APP_ID D:\upupw\UPUPW_AP5.5_64\vhosts\www.onlineOCR.com\Application\Home\Controller\OcrController.class.php 第 32 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002171s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002309s ]
+
